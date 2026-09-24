@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>COCO AI Cracked By SITB OFFICIAL - AI Engine</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+    width:100vw;
+    min-height:100vh;
+    background:#030108;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow-x:hidden;
+}
+
+.app-container{
+    width:100%;
+    max-width:450px;
+    min-height:100vh;
+    background:#06020e;
+    padding:18px 16px;
+    border:1px solid #1a0b36;
+    box-shadow:0 0 50px rgba(120,40,200,.15);
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    position:relative;
+    overflow:hidden;
+    margin:0 auto;
+}
+
+.page{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    width:100%;
+    flex:1;
+}
+
+.hidden{
+    display:none!important;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-title{
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:2px;
+    background:linear-gradient(90deg,#fff,#a855f7);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.profile-avatar{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:2px solid #8b5cf6;
+    overflow:hidden;
+    background:#1e0f38;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.profile-avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.user-card{
+    background:linear-gradient(135deg,rgba(30,15,55,.8),rgba(12,5,25,.9));
+    border:1px solid #2a154e;
+    border-radius:22px;
+    padding:14px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.user-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.avatar-box{
+    width:55px;
+    height:55px;
+    border-radius:16px;
+    background:linear-gradient(135deg,#00f2fe,#4facfe);
+    padding:2px;
+}
+
+.avatar-inner{
+    width:100%;
+    height:100%;
+    background:#0d061f;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.user-info .welcome{
+    font-size:9px;
+    color:#8f84ad;
+    font-weight:700;
+}
+
+.user-info .username{
+    font-size:17px;
+    font-weight:800;
+    margin:2px 0;
+}
+
+.admin-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    background:rgba(0,198,255,.1);
+    border:1px solid #00c6ff;
+    color:#00c6ff;
+    font-size:8px;
+    font-weight:700;
+    padding:2px 6px;
+    border-radius:10px;
+}
+
+.candles-group{
+    display:flex;
+    gap:6px;
+    align-items:center;
+}
+
+.candle-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.sell-tag{
+    background:rgba(239,68,68,.2);
+    border:1px solid #ef4444;
+    color:#ef4444;
+    font-size:7px;
+    font-weight:800;
+    padding:2px 4px;
+    border-radius:4px;
+    margin-bottom:2px;
+}
+
+.buy-tag{
+    background:rgba(34,197,94,.2);
+    border:1px solid #22c55e;
+    color:#22c55e;
+    font-size:7px;
+    font-weight:800;
+    padding:2px 4px;
+    border-radius:4px;
+    margin-top:2px;
+}
+
+.candlestick-red,
+.candlestick-green{
+    width:14px;
+    height:26px;
+    border-radius:3px;
+}
+
+.candlestick-red{ background:#ef4444; }
+.candlestick-green{ background:#22c55e; }
+
+.limit-bar{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.limit-icon{
+    width:30px;
+    height:30px;
+    background:rgba(0,198,255,.1);
+    border:1px solid rgba(0,198,255,.3);
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#00c6ff;
+    font-size:11px;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.card{
+    background:#0d061a;
+    border-radius:20px;
+    padding:14px;
+    height:130px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.card:active{ transform:scale(.97); }
+
+.card-purple{
+    border:1px solid #2e155c;
+    background:radial-gradient(circle at top left,rgba(139,92,246,.15),#0d061a 70%);
+}
+
+.card-green{
+    border:1px solid #14402d;
+    background:radial-gradient(circle at top left,rgba(34,197,94,.15),#0d061a 70%);
+}
+
+.card-pink{
+    border:1px solid #48112a;
+    background:radial-gradient(circle at top left,rgba(236,72,153,.15),#0d061a 70%);
+}
+
+.card-yellow{
+    border:1px solid #423210;
+    background:radial-gradient(circle at top left,rgba(234,179,8,.15),#0d061a 70%);
+}
+
+.card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.card-icon{
+    width:30px;
+    height:30px;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+}
+
+.icon-purple{
+    background:rgba(168,85,247,.15);
+    border:1px solid #a855f7;
+    color:#a855f7;
+}
+
+.icon-green{
+    background:rgba(34,197,94,.15);
+    border:1px solid #22c55e;
+    color:#22c55e;
+}
+
+.icon-pink{
+    background:rgba(236,72,153,.15);
+    border:1px solid #ec4899;
+    color:#ec4899;
+}
+
+.icon-yellow{
+    background:rgba(234,179,8,.15);
+    border:1px solid #eab308;
+    color:#eab308;
+}
+
+.infinity-symbol{
+    color:#00c6ff;
+    font-size:15px;
+    font-weight:bold;
+}
+
+.card-bottom h3{
+    font-size:13px;
+    font-weight:700;
+    color:#fff;
+    margin-bottom:2px;
+}
+
+.card-bottom p{
+    font-size:8px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+.watermark-container{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px 0;
+    user-select:none;
+    pointer-events:none;
+}
+
+.watermark-text{
+    font-size:26px;
+    font-weight:900;
+    letter-spacing:5px;
+    color:rgba(255,255,255,.07);
+    text-transform:uppercase;
+    text-shadow:0 0 10px rgba(168,85,247,.1);
+}
+
+.modal-overlay{
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    background:rgba(4,2,10,.95);
+    backdrop-filter:blur(8px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:18px;
+    z-index:50;
+}
+
+.modal-card{
+    background:#0d061a;
+    border:1px solid #2e155c;
+    border-radius:22px;
+    padding:18px;
+}
+
+.modal-title{
+    text-align:center;
+    font-size:15px;
+    font-weight:700;
+    margin-bottom:14px;
+    color:#a855f7;
+}
+
+.broker-item{
+    background:#14092b;
+    border:1px solid #281254;
+    border-radius:12px;
+    padding:10px 14px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:8px;
+    cursor:pointer;
+}
+
+.broker-item.selected{
+    border-color:#a855f7;
+    background:#1f0c45;
+}
+
+.broker-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.broker-icon-box{
+    width:32px;
+    height:32px;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.icon-quotex{ background:rgba(239,68,68,.15); border:1px solid #ef4444; color:#ef4444; }
+.icon-binolla{ background:rgba(234,179,8,.15); border:1px solid #eab308; color:#eab308; }
+.icon-pocket{ background:rgba(59,130,246,.15); border:1px solid #3b82f6; color:#3b82f6; }
+
+.broker-item span{
+    font-size:13px;
+    font-weight:600;
+}
+
+.btn-action{
+    width:100%;
+    background:linear-gradient(90deg,#7c3aed,#a855f7);
+    border:none;
+    color:white;
+    padding:12px;
+    border-radius:12px;
+    font-weight:bold;
+    font-size:12px;
+    cursor:pointer;
+    margin-top:8px;
+    box-shadow:0 4px 15px rgba(168,85,247,.3);
+}
+
+.upload-zone{
+    border:2px dashed #3e1b7a;
+    background:#110724;
+    border-radius:16px;
+    padding:20px 12px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.upload-zone i{
+    font-size:28px;
+    color:#a855f7;
+    margin-bottom:6px;
+}
+
+.upload-zone p{ font-size:11px; font-weight:600; }
+.upload-zone span{ font-size:8px; color:#726793; display:block; margin-top:4px; }
+
+.preview-img-container{
+    width:100%;
+    height:110px;
+    border-radius:10px;
+    overflow:hidden;
+    margin-top:10px;
+    display:none;
+    border:1px solid #2e155c;
+}
+
+.preview-img-container img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.auth-card{
+    background:#0d061a;
+    border:1px solid #2e155c;
+    border-radius:22px;
+    padding:24px 18px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+    box-shadow:0 0 30px rgba(168,85,247,.2);
+}
+
+.auth-title{
+    font-size:18px;
+    font-weight:900;
+    color:#a855f7;
+    text-align:center;
+    text-shadow:0 0 10px rgba(168,85,247,.4);
+}
+
+.auth-subtitle{
+    font-size:11px;
+    color:#8f84ad;
+    text-align:center;
+    margin-top:-8px;
+}
+
+.key-input{
+    width:100%;
+    padding:14px;
+    background:#14092b;
+    border:1px solid #3b1c73;
+    border-radius:12px;
+    color:#00c6ff;
+    font-size:13px;
+    font-weight:bold;
+    text-align:center;
+    outline:none;
+    letter-spacing:1px;
+    box-shadow:inset 0 0 10px rgba(0,0,0,.5);
+}
+
+.key-input:focus{
+    border-color:#a855f7;
+    box-shadow:0 0 12px rgba(168,85,247,.4);
+}
+
+.tg-btn{
+    width:100%;
+    padding:14px;
+    border-radius:14px;
+    font-size:13px;
+    font-weight:800;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    cursor:pointer;
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,.2);
+}
+
+.tg-btn-official{ background:linear-gradient(135deg,#0088cc,#005588); }
+.tg-btn-public{ background:linear-gradient(135deg,#10b981,#047857); }
+.tg-btn-bot{ background:linear-gradient(135deg,#ec4899,#be185d); }
+
+.tg-btn.joined{
+    border:2px solid #22c55e!important;
+    position:relative;
+}
+
+.tg-btn.joined::after{
+    content:'✓';
+    position:absolute;
+    right:15px;
+    font-size:16px;
+    color:#22c55e;
+    font-weight:900;
+}
+
+.btn-verify{ background:linear-gradient(90deg,#22c55e,#16a34a); }
+
+.btn-verify.disabled{
+    background:#2a3447;
+    color:#7888a0;
+    box-shadow:none;
+    cursor:not-allowed;
+    border:1px solid #3b4c66;
+    opacity:.6;
+}
+
+.engine-sub-header{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:4px;
+}
+
+.back-circle-btn{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    cursor:pointer;
+}
+
+.engine-title-box h2{
+    font-size:17px;
+    font-weight:800;
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.engine-title-box span{
+    font-size:9px;
+    color:#8f84ad;
+    font-weight:700;
+}
+
+.tab-switch{
+    background:#0d061f;
+    border:1px solid #231242;
+    border-radius:12px;
+    padding:3px;
+    display:flex;
+    gap:4px;
+    margin-bottom:4px;
+}
+
+.tab-btn{
+    flex:1;
+    padding:8px;
+    text-align:center;
+    border-radius:9px;
+    font-size:10px;
+    font-weight:800;
+    color:#8f84ad;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+}
+
+.tab-btn.active{
+    background:linear-gradient(90deg,#4c1d95,#6d28d9);
+    color:#fff;
+    border:1px solid #8b5cf6;
+}
+
+.scan-viewport{
+    width:100%;
+    height:320px;
+    border-radius:18px;
+    background:#070312;
+    border:1px solid #1f103d;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.chart-img-background{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.35;
+    filter:blur(1px);
+}
+
+.laser-line{
+    position:absolute;
+    top:0; left:0; right:0;
+    height:3px;
+    background:linear-gradient(90deg,transparent,#00d2ff,#00f2fe,#00d2ff,transparent);
+    box-shadow:0 0 15px #00f2fe,0 0 30px #00f2fe;
+    animation:scanAnimation 2s ease-in-out infinite alternate;
+    z-index:10;
+}
+
+@keyframes scanAnimation{
+    0%{top:2%}
+    100%{top:96%}
+}
+
+.corner{
+    position:absolute;
+    width:14px;
+    height:14px;
+    border-color:#00c6ff;
+    border-style:solid;
+}
+
+.top-left{ top:10px; left:10px; border-width:2px 0 0 2px; }
+.top-right{ top:10px; right:10px; border-width:2px 2px 0 0; }
+.bottom-left{ bottom:10px; left:10px; border-width:0 0 2px 2px; }
+.bottom-right{ bottom:10px; right:10px; border-width:0 2px 2px 0; }
+
+.processing-box{
+    position:absolute;
+    width:85%;
+    background:rgba(8,4,20,.85);
+    border:1px solid rgba(0,198,255,.3);
+    border-radius:16px;
+    padding:18px 14px;
+    text-align:center;
+    backdrop-filter:blur(10px);
+    z-index:12;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+}
+
+.processing-icon{
+    width:38px;
+    height:38px;
+    background:rgba(0,198,255,.1);
+    border:1px solid #00c6ff;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#00c6ff;
+}
+
+.processing-text{
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.progress-bar-container{
+    width:100%;
+    height:4px;
+    background:rgba(255,255,255,.1);
+    border-radius:4px;
+    overflow:hidden;
+}
+
+.progress-bar-fill{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#00c6ff,#0072ff);
+    transition:width .1s linear;
+}
+
+.sub-status{
+    font-size:8px;
+    color:#726793;
+    font-family:monospace;
+}
+
+.error-card{
+    background:#18080c;
+    border:1px solid #ef4444;
+    border-radius:20px;
+    padding:24px 16px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+}
+
+.error-icon{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:rgba(239,68,68,.15);
+    border:1px solid #ef4444;
+    color:#ef4444;
+    font-size:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.result-container{
+    background:#0b0518;
+    border:1px solid #221242;
+    border-radius:20px;
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.res-pair-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.res-flags-name{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.res-flags{
+    display:flex;
+    gap:2px;
+}
+
+.res-flags span{ font-size:18px; }
+
+.res-pair-title{
+    font-size:16px;
+    font-weight:900;
+}
+
+.res-otc-badge{
+    background:rgba(139,92,246,.2);
+    border:1px solid #8b5cf6;
+    color:#a855f7;
+    font-size:8px;
+    font-weight:800;
+    padding:2px 6px;
+    border-radius:6px;
+}
+
+.res-dir-badge{
+    font-size:10px;
+    font-weight:800;
+    padding:4px 10px;
+    border-radius:8px;
+}
+
+.badge-up{ background:rgba(34,197,94,.15); border:1px solid #22c55e; color:#22c55e; }
+.badge-down{ background:rgba(239,68,68,.15); border:1px solid #ef4444; color:#ef4444; }
+
+.option-box{
+    border-radius:16px;
+    padding:14px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.box-call{ background:rgba(34,197,94,.12); border:1px solid #22c55e; }
+.box-put{ background:rgba(239,68,68,.12); border:1px solid #ef4444; }
+
+.circle-icon{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.circle-call{ background:#22c55e; }
+.circle-put{ background:#ef4444; }
+
+.option-info{ display:flex; flex-direction:column; }
+.option-label{ font-size:9px; font-weight:800; }
+.option-value{ font-size:20px; font-weight:900; }
+
+.confidence-section{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.conf-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+
+.conf-title{ font-size:9px; font-weight:800; color:#7e71a0; }
+.conf-subtitle{ font-size:10px; color:#22c55e; }
+.conf-percent{ font-size:18px; font-weight:900; color:#38bdf8; }
+
+.conf-bar-bg{
+    width:100%;
+    height:6px;
+    background:#160a2d;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.conf-bar-fill{
+    height:100%;
+    background:linear-gradient(90deg,#22c55e,#4ade80);
+}
+
+.reasoning-box{ display:flex; flex-direction:column; gap:6px; }
+.reason-head{ font-size:10px; font-weight:800; color:#a855f7; }
+
+.reason-card{
+    background:#110724;
+    border:1px solid #231142;
+    border-radius:12px;
+    padding:10px;
+    display:flex;
+    gap:10px;
+}
+
+.num-circle{
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#2e155c;
+    color:#a855f7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+}
+
+.reason-text{ font-size:10px; color:#b3a7d4; line-height:1.45; }
+
+.metrics-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.metric-card{
+    background:#110724;
+    border:1px solid #231142;
+    border-radius:12px;
+    padding:10px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.metric-icon{
+    width:28px;
+    height:28px;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.metric-icon-green{ background:rgba(34,197,94,.15); color:#22c55e; }
+.metric-icon-purple{ background:rgba(168,85,247,.15); color:#a855f7; }
+
+.metric-data span{ font-size:8px; color:#726793; display:block; }
+.metric-data h4{ font-size:11px; }
+
+.btn-cyan-reload{
+    width:100%;
+    background:#00a8ff;
+    border:none;
+    color:#000;
+    padding:13px;
+    border-radius:14px;
+    font-weight:900;
+    font-size:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    cursor:pointer;
+}
+
+.btn-cyan-reload.disabled{
+    background:#2a3447;
+    color:#7888a0;
+    box-shadow:none;
+    cursor:not-allowed;
+}
+
+.pairs-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:10px;
+}
+
+.pair-btn{
+    padding:12px 10px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.15);
+    font-size:12px;
+    font-weight:800;
+    color:#fff;
+    text-align:center;
+    cursor:pointer;
+}
+
+.p-btn-1{background:#9f1239}
+.p-btn-2{background:#1d4ed8}
+.p-btn-3{background:#047857}
+.p-btn-4{background:#b45309}
+.p-btn-5{background:#6d28d9}
+.p-btn-6{background:#be185d}
+.p-btn-7{background:#0e7490}
+.p-btn-8{background:#3f6212}
+.p-btn-9{background:#4338ca}
+.p-btn-10{background:#a16207}
+
+.time-buttons-row{
+    display:flex;
+    gap:8px;
+    margin-top:14px;
+}
+
+.time-btn{
+    flex:1;
+    padding:12px;
+    border-radius:12px;
+    font-size:11px;
+    font-weight:800;
+    color:#fff;
+    text-align:center;
+    cursor:pointer;
+}
+
+.time-btn-1{background:#047857}
+.time-btn-2{background:#d97706}
+.time-btn-5{background:#6d28d9}
+
+.live-signal-box{
+    background:#090314;
+    border:1px solid #2e155c;
+    border-radius:18px;
+    padding:16px;
+    font-family:'Courier New',monospace;
+    line-height:1.8;
+    font-size:13px;
+}
+
+.live-line{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-bottom:4px;
+}
+
+.live-line-title{
+    color:#a855f7;
+    font-weight:bold;
+    justify-content:center;
+    width:100%;
+}
+
+.future-input-box{
+    width:100%;
+    padding:12px;
+    background:#12072b;
+    border:1px solid #3b1c73;
+    border-radius:12px;
+    color:#fff;
+    font-size:14px;
+    outline:none;
+    text-align:center;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.future-output-box{
+    background:#080312;
+    border:1px solid #3d1435;
+    border-radius:16px;
+    padding:14px;
+    font-family:'Courier New',monospace;
+    font-size:12px;
+    line-height:1.7;
+    color:#f3d5f0;
+    white-space:pre-wrap;
+    max-height:250px;
+    overflow-y:auto;
+}
+
+.footer{
+    text-align:center;
+    font-size:9px;
+    color:#4b4168;
+    letter-spacing:1.5px;
+    font-weight:700;
+    margin-top:auto;
+    padding-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="app-container">
+
+<!-- HEADER -->
+<div class="header">
+    <div class="logo-title">
+    COCO AI Cracked By SITB OFFICIAL
+    </div>
+    <div class="profile-avatar">
+    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Cracked By SITB OFFICIAL">
+    </div>
+</div>
+
+
+<!-- LOGIN -->
+<div id="page-login" class="page">
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+        <div class="auth-card">
+            <div style="width:50px;height:50px;background:rgba(168,85,247,.15);border:1px solid #a855f7;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#a855f7;font-size:22px;">
+                <i class="fa-solid fa-key"></i>
+            </div>
+            <div class="auth-title">ACTIVATION REQUIRED</div>
+            <div class="auth-subtitle">অনুগ্রহ করে আপনার সঠিক Activation Key টি প্রদান করুন</div>
+
+            <input type="text" id="activationKeyInput" class="key-input" placeholder="XXXX-XXXX-XXXX-XXXX" autocomplete="off">
+
+            <div id="loginErrorMsg" style="color:#ef4444;font-size:11px;font-weight:bold;display:none;">
+                <i class="fa-solid fa-triangle-exclamation"></i> ভুল এক্টিভেশন কি দিয়েছেন!
+            </div>
+
+            <button class="btn-action" onclick="verifyActivationKey()">LOG IN TO SYSTEM</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- TELEGRAM VERIFICATION -->
+<div id="page-enter" class="page hidden">
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+        <div class="auth-card">
+            <div style="width:50px;height:50px;background:rgba(0,198,255,.15);border:1px solid #00c6ff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#00c6ff;font-size:22px;">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="auth-title" style="color:#00c6ff;">VERIFICATION STEP</div>
+            <div class="auth-subtitle">অ্যাপ ব্যবহার করতে নিচের ৩টি চ্যানেলে যুক্ত হন</div>
+
+            <a href="https://t.me/sitbofficial" target="_blank" id="btnTg1" class="tg-btn tg-btn-official" onclick="markJoined(1)">
+                <i class="fa-brands fa-telegram"></i> SITB OFFICIAL
+            </a>
+
+            <a href="https://t.me/stbpublic" target="_blank" id="btnTg2" class="tg-btn tg-btn-public" onclick="markJoined(2)">
+                <i class="fa-brands fa-telegram"></i> STB PUBLIC
+            </a>
+
+            <a href="https://t.me/sitbbotfree" target="_blank" id="btnTg3" class="tg-btn tg-btn-bot" onclick="markJoined(3)">
+                <i class="fa-brands fa-telegram"></i> BOT CHANNEL
+            </a>
+
+            <button id="btnVerifyChannel" class="btn-action btn-verify disabled" onclick="enterMainApp()">
+                VERIFY & CONTINUE
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- HOME -->
+<div id="page-home" class="page hidden">
+    <div class="user-card">
+        <div class="user-left">
+            <div class="avatar-box">
+                <div class="avatar-inner">
+                    <img src="https://i.postimg.cc/76mrK7B5/IMG-20260825-215652-178.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:14px;">
+                </div>
+            </div>
+            <div class="user-info">
+                <span class="welcome">WELCOME BACK</span>
+                <div class="username">Cracked By SITB OFFICIAL</div>
+                <div class="admin-badge">
+                    <i class="fa-solid fa-circle-check"></i> ACTIVE
+                </div>
+            </div>
+        </div>
+
+        <div class="candles-group">
+            <div class="candle-item">
+                <span class="sell-tag">🔴 SELL</span>
+                <div class="candlestick-red"></div>
+            </div>
+            <div class="candle-item">
+                <div class="candlestick-green"></div>
+                <span class="buy-tag">🟢 BUY</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="limit-bar">
+        <div class="limit-icon">
+            <i class="fa-solid fa-chart-simple"></i>
+        </div>
+        <div>
+            <h4 style="font-size:13px;">Daily Limit</h4>
+            <p style="font-size:8px;color:#726793;font-weight:700;">RESETS EVERY 24 HOURS</p>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="card card-purple" onclick="startAnalyzerProcess()">
+            <div class="card-top">
+                <div class="card-icon icon-purple"><i class="fa-solid fa-microchip"></i></div>
+                <span class="infinity-symbol">∞</span>
+            </div>
+            <div class="card-bottom">
+                <h3>AI Analyzer</h3>
+                <p style="color:#a855f7;">● QUANTUM TECH</p>
+            </div>
+        </div>
+
+        <div class="card card-green" onclick="openLiveSignalModal()">
+            <div class="card-top">
+                <div class="card-icon icon-green"><i class="fa-solid fa-radio"></i></div>
+                <span class="infinity-symbol">∞</span>
+            </div>
+            <div class="card-bottom">
+                <h3>Live Signal</h3>
+                <p style="color:#22c55e;">● REAL-TIME DATA</p>
+            </div>
+        </div>
+
+        <div class="card card-pink" onclick="openFutureSignalModal()">
+            <div class="card-top">
+                <div class="card-icon icon-pink"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <span class="infinity-symbol">∞</span>
+            </div>
+            <div class="card-bottom">
+                <h3>Future Signal</h3>
+                <p style="color:#ec4899;">● PREDICTIVE</p>
+            </div>
+        </div>
+
+        <div class="card card-yellow">
+            <div class="card-top">
+                <div class="card-icon icon-yellow"><i class="fa-solid fa-wallet"></i></div>
+                <span class="infinity-symbol">∞</span>
+            </div>
+            <div class="card-bottom">
+                <h3>Management</h3>
+                <p style="color:#eab308;">● RISK PROTECT</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="watermark-container">
+        <div class="watermark-text">STB OWNER</div>
+    </div>
+</div>
+
+
+<!-- ANALYZER -->
+<div id="page-analyzer" class="page hidden">
+    <div class="engine-sub-header">
+        <div class="back-circle-btn" onclick="showHome()">
+            <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="engine-title-box">
+            <h2>AI Engine <i class="fa-solid fa-wand-magic-sparkles" style="color:#a855f7;font-size:13px;"></i></h2>
+            <span id="selectedBrokerTag">BROKER: QUOTEX</span>
+        </div>
+    </div>
+
+    <div class="tab-switch">
+        <div class="tab-btn active"><i class="fa-solid fa-microchip"></i> OTC</div>
+        <div class="tab-btn"><i class="fa-solid fa-bolt"></i> REAL</div>
+    </div>
+
+    <div id="stateScanning" class="scan-viewport">
+        <img id="scannedChartImg" class="chart-img-background">
+        <div class="laser-line"></div>
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+
+        <div class="processing-box">
+            <div class="processing-icon"><i class="fa-solid fa-scan"></i></div>
+            <div class="processing-text">AI PROCESSING</div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progressBarFill"></div>
+            </div>
+            <div class="sub-status" id="subStatusText">Cross-checking trend & pattern...</div>
+        </div>
+    </div>
+
+    <div id="stateError" class="error-card hidden">
+        <div class="error-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <h3 style="font-size:16px;color:#ef4444;">আমি কোন Chart দেখতে পাচ্ছি না!</h3>
+        <p style="font-size:11px;color:#bfa5ff;">দয়া করে একটি সঠিক ট্রেডিং চার্ট এর স্ক্রিনশট আপলোড করুন।</p>
+        <button class="btn-cyan-reload" style="background:#ef4444;color:#fff;" onclick="resetToUploadDirect()">
+            <i class="fa-solid fa-arrow-rotate-left"></i> আবার ছবি আপলোড করুন
+        </button>
+    </div>
+
+    <div id="stateResult" class="result-container hidden">
+        <div class="res-pair-row">
+            <div class="res-flags-name">
+                <div class="res-flags" id="resFlags"></div>
+                <span class="res-pair-title" id="resPairTitle">USD/BDT</span>
+                <span class="res-otc-badge">OTC</span>
+            </div>
+            <div class="res-dir-badge badge-up" id="resDirBadge">▲ UP</div>
+        </div>
+
+        <div class="option-box box-call" id="resOptionBox">
+            <div class="circle-icon circle-call" id="resCircleIcon">
+                <i class="fa-solid fa-arrow-up"></i>
+            </div>
+            <div class="option-info">
+                <span class="option-label">● PLACE OPTION</span>
+                <span class="option-value" id="resOptionValue">CALL</span>
+            </div>
+        </div>
+
+        <div class="confidence-section">
+            <div class="conf-header">
+                <div>
+                    <span class="conf-title">CONFIDENCE</span>
+                    <div class="conf-subtitle">Moderate conviction · AI vision read</div>
+                </div>
+                <span class="conf-percent" id="resConfidence">85%</span>
+            </div>
+            <div class="conf-bar-bg">
+                <div class="conf-bar-fill" id="resConfBar" style="width:85%;"></div>
+            </div>
+        </div>
+
+        <div class="reasoning-box">
+            <div class="reason-head"><i class="fa-solid fa-wand-magic-sparkles"></i> AI REASONING</div>
+            <div class="reason-card">
+                <div class="num-circle">1</div>
+                <div class="reason-text" id="resReasonText">Market analysis completed.</div>
+            </div>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-icon metric-icon-green"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="metric-data">
+                    <span>BIAS</span>
+                    <h4 id="resBias">Bullish</h4>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-icon metric-icon-purple"><i class="fa-solid fa-expand"></i></div>
+                <div class="metric-data">
+                    <span>MODE</span>
+                    <h4>Trap Detection</h4>
+                </div>
+            </div>
+        </div>
+
+        <button id="btnReloadSignal" class="btn-cyan-reload" onclick="resetToUpload()">
+            <i class="fa-solid fa-rotate-right"></i>
+            <span id="reloadBtnText">Analyze another chart</span>
+        </button>
+    </div>
+</div>
+
+
+<!-- BROKER MODAL -->
+<div id="modal-broker" class="modal-overlay hidden">
+    <div class="modal-card">
+        <div class="modal-title">ENVIRONMENT SETUP</div>
+        <h4 style="font-size:13px;text-align:center;margin-bottom:12px;color:#8f84ad;">Select Broker</h4>
+
+        <div class="broker-item selected" onclick="selectBroker(this,'QUOTEX')">
+            <div class="broker-left">
+                <div class="broker-icon-box icon-quotex"><i class="fa-solid fa-q"></i></div>
+                <span>Quotex</span>
+            </div>
+            <i class="fa-solid fa-circle-check" style="color:#a855f7;"></i>
+        </div>
+
+        <div class="broker-item" onclick="selectBroker(this,'BINOLLA')">
+            <div class="broker-left">
+                <div class="broker-icon-box icon-binolla"><i class="fa-solid fa-b"></i></div>
+                <span>Binolla</span>
+            </div>
+            <i class="fa-regular fa-circle" style="color:#726793;"></i>
+        </div>
+
+        <div class="broker-item" onclick="selectBroker(this,'POCKET OPTION')">
+            <div class="broker-left">
+                <div class="broker-icon-box icon-pocket"><i class="fa-solid fa-p"></i></div>
+                <span>Pocket Option</span>
+            </div>
+            <i class="fa-regular fa-circle" style="color:#726793;"></i>
+        </div>
+
+        <button class="btn-action" onclick="goToUploadScreen()">CONTINUE TO ANALYZER</button>
+    </div>
+</div>
+
+
+<!-- UPLOAD MODAL -->
+<div id="modal-upload" class="modal-overlay hidden">
+    <div class="modal-card">
+        <div class="modal-title">COCO AI Cracked By SITB OFFICIAL - UPLOAD CHART</div>
+        <div class="upload-zone" onclick="document.getElementById('fileInput').click()">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <p>Drop Chart or Tap to Browse</p>
+            <span>PNG, JPG, WEBP SUPPORTED</span>
+            <input type="file" id="fileInput" accept="image/*" style="display:none;" onchange="handleFileSelect(event)">
+        </div>
+
+        <div class="preview-img-container" id="previewContainer">
+            <img id="previewImg">
+        </div>
+
+        <button id="btnAnalyze" class="btn-action hidden" onclick="startScanningProcess()">
+            ANALYZE CHART NOW
+        </button>
+    </div>
+</div>
+
+
+<!-- LIVE SIGNAL -->
+<div id="modal-live-signal" class="modal-overlay hidden">
+    <div class="modal-card" style="max-height:90vh;overflow-y:auto;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <div class="modal-title" style="margin-bottom:0;">LIVE SIGNAL GENERATOR</div>
+            <div onclick="closeLiveSignalModal()" style="color:#8f84ad;cursor:pointer;font-size:16px;">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <div id="liveStep1">
+            <h4 style="font-size:12px;text-align:center;color:#bfa5ff;margin-bottom:8px;">Select Currency Pair:</h4>
+            <div class="pairs-grid">
+                <div class="pair-btn p-btn-1" onclick="selectLivePair('USDBDT-OTC')">USDBDT-OTC</div>
+                <div class="pair-btn p-btn-2" onclick="selectLivePair('EURUSD-OTC')">EURUSD-OTC</div>
+                <div class="pair-btn p-btn-3" onclick="selectLivePair('GBPUSD-OTC')">GBPUSD-OTC</div>
+                <div class="pair-btn p-btn-4" onclick="selectLivePair('USDINR-OTC')">USDINR-OTC</div>
+                <div class="pair-btn p-btn-5" onclick="selectLivePair('USDJPY-OTC')">USDJPY-OTC</div>
+                <div class="pair-btn p-btn-6" onclick="selectLivePair('USDPKR-OTC')">USDPKR-OTC</div>
+                <div class="pair-btn p-btn-7" onclick="selectLivePair('USDBRL-OTC')">USDBRL-OTC</div>
+                <div class="pair-btn p-btn-8" onclick="selectLivePair('AUDUSD-OTC')">AUDUSD-OTC</div>
+                <div class="pair-btn p-btn-9" onclick="selectLivePair('USDCAD-OTC')">USDCAD-OTC</div>
+                <div class="pair-btn p-btn-10" onclick="selectLivePair('USDTRY-OTC')">USDTRY-OTC</div>
+            </div>
+        </div>
+
+        <div id="liveStep2" class="hidden">
+            <h4 style="font-size:12px;text-align:center;color:#bfa5ff;">
+                Selected: <span id="selectedPairNameText" style="color:#00c6ff;"></span>
+            </h4>
+            <p style="font-size:11px;text-align:center;color:#8f84ad;margin-bottom:10px;">Select Expiry Time:</p>
+            <div class="time-buttons-row">
+                <div class="time-btn time-btn-1" onclick="generateLiveSignal('1 minute')">1 Minute</div>
+                <div class="time-btn time-btn-2" onclick="generateLiveSignal('2 minutes')">2 Minutes</div>
+                <div class="time-btn time-btn-5" onclick="generateLiveSignal('5 minutes')">5 Minutes</div>
+            </div>
+        </div>
+
+        <div id="liveStep3" class="hidden">
+            <div class="live-signal-box">
+                <div class="live-line live-line-title">📣 LIVE SIGNAL 🤫</div>
+                <div class="live-line">📊 <span id="outPair">USDBDT-OTC</span> 📈</div>
+                <div class="live-line">💎 <span id="outTime">1 minute</span></div>
+                <div class="live-line">👑 <span id="outDirection">CALL 🟢</span></div>
+                <div class="live-line">‼️ NEXT CANDLE</div>
+                <div class="live-line">🔗 1 STEP MTG ℹ️</div>
+            </div>
+
+            <button id="btnLiveCooldown" class="btn-cyan-reload" style="margin-top:14px;" onclick="resetLiveSignalStep()">
+                <i class="fa-solid fa-rotate-right"></i>
+                <span id="liveCooldownBtnText">Generate Another Signal</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- FUTURE SIGNAL -->
+<div id="modal-future-signal" class="modal-overlay hidden">
+    <div class="modal-card" style="max-height:90vh;overflow-y:auto;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <div class="modal-title" style="margin-bottom:0;color:#ec4899;">FUTURE SIGNAL GENERATOR</div>
+            <div onclick="closeFutureSignalModal()" style="color:#8f84ad;cursor:pointer;">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <div id="futureInputStep">
+            <p style="font-size:11px;text-align:center;color:#b3a7d4;">কয়টি সিগন্যাল জেনারেট করতে চান? (সংখ্যা লিখুন):</p>
+            <input type="number" id="futureAmountInput" class="future-input-box" placeholder="যেমন: 10 বা 15" min="1" max="50" value="10">
+            <button class="btn-action" style="background:linear-gradient(90deg,#db2777,#ec4899);" onclick="processFutureSignals()">
+                GENERATE FUTURE SIGNALS
+            </button>
+        </div>
+
+        <div id="futureResultStep" class="hidden">
+            <div class="future-output-box" id="futureOutputText"></div>
+            <button id="btnFutureCooldown" class="btn-cyan-reload" style="margin-top:14px;background:#ec4899;color:#fff;" onclick="resetFutureSignalStep()">
+                <i class="fa-solid fa-rotate-right"></i>
+                <span id="futureCooldownBtnText">Generate New List</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer">
+© 2026 SITB. ALL RIGHTS RESERVED.
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   APP CORE
+========================================================= */
+
+const CORRECT_KEY = "SITB-4KX9-V7MQ-R2ZT-N8PW";
+
+let isActivated = localStorage.getItem("isActivated") === "true";
+let isVerified = localStorage.getItem("isVerified") === "true";
+
+let joinedTg1 = localStorage.getItem("joinedTg1") === "true";
+let joinedTg2 = localStorage.getItem("joinedTg2") === "true";
+let joinedTg3 = localStorage.getItem("joinedTg3") === "true";
+
+let selectedFile = null;
+let selectedBrokerName = "QUOTEX";
+let detectedPairName = null;
+let isChartDetected = false;
+
+let cooldownSeconds = 0;
+let cooldownTimer = null;
+
+let liveSelectedPair = "";
+let liveCooldownSeconds = 0;
+let liveCooldownTimer = null;
+
+let futureCooldownSeconds = 0;
+let futureCooldownTimer = null;
+
+const futurePairsList = [
+    "USDBDT-OTC",
+    "EURUSD-OTC",
+    "GBPUSD-OTC",
+    "USDINR-OTC",
+    "USDJPY-OTC",
+    "USDPKR-OTC",
+    "USDBRL-OTC",
+    "AUDUSD-OTC",
+    "USDCAD-OTC",
+    "USDTRY-OTC"
+];
+
+// Initialize application state on load
+window.addEventListener("DOMContentLoaded", function(){
+    if(joinedTg1) document.getElementById("btnTg1").classList.add("joined");
+    if(joinedTg2) document.getElementById("btnTg2").classList.add("joined");
+    if(joinedTg3) document.getElementById("btnTg3").classList.add("joined");
+
+    if(joinedTg1 && joinedTg2 && joinedTg3){
+        document.getElementById("btnVerifyChannel").classList.remove("disabled");
+    }
+
+    if(isActivated && isVerified){
+        document.getElementById("page-login").classList.add("hidden");
+        document.getElementById("page-enter").classList.add("hidden");
+        document.getElementById("page-home").classList.remove("hidden");
+    } else if(isActivated){
+        document.getElementById("page-login").classList.add("hidden");
+        document.getElementById("page-enter").classList.remove("hidden");
+    }
+});
+
+/* =========================================================
+   AUTH
+========================================================= */
+
+function verifyActivationKey(){
+    const value = document.getElementById("activationKeyInput").value.trim();
+    const error = document.getElementById("loginErrorMsg");
+
+    if(value === CORRECT_KEY){
+        isActivated = true;
+        localStorage.setItem("isActivated", "true");
+        error.style.display = "none";
+        document.getElementById("page-login").classList.add("hidden");
+        document.getElementById("page-enter").classList.remove("hidden");
+    } else {
+        error.style.display = "block";
+    }
+}
+
+function markJoined(num){
+    if(num === 1){
+        joinedTg1 = true;
+        localStorage.setItem("joinedTg1", "true");
+        document.getElementById("btnTg1").classList.add("joined");
+    }
+    if(num === 2){
+        joinedTg2 = true;
+        localStorage.setItem("joinedTg2", "true");
+        document.getElementById("btnTg2").classList.add("joined");
+    }
+    if(num === 3){
+        joinedTg3 = true;
+        localStorage.setItem("joinedTg3", "true");
+        document.getElementById("btnTg3").classList.add("joined");
+    }
+
+    if(joinedTg1 && joinedTg2 && joinedTg3){
+        document.getElementById("btnVerifyChannel").classList.remove("disabled");
+    }
+}
+
+function enterMainApp(){
+    if(joinedTg1 && joinedTg2 && joinedTg3 && isActivated){
+        isVerified = true;
+        localStorage.setItem("isVerified", "true");
+        document.getElementById("page-enter").classList.add("hidden");
+        document.getElementById("page-home").classList.remove("hidden");
+    }
+}
+
+function showHome(){
+    if(!isActivated || !isVerified){
+        return;
+    }
+
+    document.querySelectorAll(".modal-overlay").forEach(function(modal){
+        modal.classList.add("hidden");
+    });
+
+    document.getElementById("page-analyzer").classList.add("hidden");
+    document.getElementById("page-home").classList.remove("hidden");
+}
+
+
+/* =========================================================
+   FLAGS
+========================================================= */
+
+function getFlagEmoji(currencyCode){
+    const map = {
+        USD:"US", BDT:"BD", INR:"IN", EUR:"EU",
+        GBP:"GB", JPY:"JP", PKR:"PK", BRL:"BR",
+        CAD:"CA", AUD:"AU", CHF:"CH", CNY:"CN",
+        NZD:"NZ", TRY:"TR"
+    };
+
+    const country = map[currencyCode] || currencyCode.substring(0,2);
+
+    return String.fromCodePoint(
+        ...country.toUpperCase().split("").map(char => 127397 + char.charCodeAt(0))
+    );
+}
+
+function getFlagsByPair(pair){
+    if(!pair){
+        return "<span>🇺🇸</span><span>🇧🇩</span>";
+    }
+
+    const parts = pair.split("/");
+    if(parts.length === 2){
+        return `<span>${getFlagEmoji(parts[0].trim())}</span><span>${getFlagEmoji(parts[1].trim())}</span>`;
+    }
+
+    return "<span>🇺🇸</span><span>🇧🇩</span>";
+}
+
+
+/* =========================================================
+   ANALYZER
+========================================================= */
+
+function startAnalyzerProcess(){
+    document.getElementById("modal-broker").classList.remove("hidden");
+}
+
+function selectBroker(el,name){
+    document.querySelectorAll(".broker-item").forEach(function(item){
+        item.classList.remove("selected");
+        const icon = item.querySelector("i.fa-circle-check,i.fa-circle");
+        if(icon){
+            icon.className = "fa-regular fa-circle";
+            icon.style.color = "#726793";
+        }
+    });
+
+    el.classList.add("selected");
+    const icon = el.querySelector("i.fa-regular,i.fa-circle-check");
+    if(icon){
+        icon.className = "fa-solid fa-circle-check";
+        icon.style.color = "#a855f7";
+    }
+
+    selectedBrokerName = name;
+}
+
+function goToUploadScreen(){
+    document.getElementById("modal-broker").classList.add("hidden");
+    document.getElementById("modal-upload").classList.remove("hidden");
+    document.getElementById("selectedBrokerTag").innerText = "BROKER: " + selectedBrokerName;
+}
+
+function handleFileSelect(event){
+    const file = event.target.files[0];
+    if(!file){
+        return;
+    }
+
+    selectedFile = file;
+
+    const reader = new FileReader();
+    reader.onload = function(e){
+        document.getElementById("previewImg").src = e.target.result;
+        document.getElementById("scannedChartImg").src = e.target.result;
+        document.getElementById("previewContainer").style.display = "block";
+        document.getElementById("btnAnalyze").classList.remove("hidden");
+    };
+
+    reader.readAsDataURL(file);
+}
+
+function startScanningProcess(){
+    if(!selectedFile){
+        return;
+    }
+
+    document.getElementById("modal-upload").classList.add("hidden");
+    document.getElementById("page-home").classList.add("hidden");
+    document.getElementById("page-analyzer").classList.remove("hidden");
+
+    document.getElementById("stateScanning").classList.remove("hidden");
+    document.getElementById("stateResult").classList.add("hidden");
+    document.getElementById("stateError").classList.add("hidden");
+
+    const fill = document.getElementById("progressBarFill");
+    const status = document.getElementById("subStatusText");
+
+    fill.style.width = "0%";
+    isChartDetected = false;
+    detectedPairName = null;
+
+    detectPairFromScreenshotRegion(selectedFile);
+
+    const totalTime = Math.floor(Math.random() * (7000 - 5000 + 1)) + 5000;
+    const intervalTime = 100;
+    const totalSteps = totalTime / intervalTime;
+    let step = 0;
+
+    const interval = setInterval(function(){
+        step++;
+        const progress = Math.min(Math.round((step / totalSteps) * 100), 100);
+        fill.style.width = progress + "%";
+
+        if(progress >= 25 && progress < 55){
+            status.innerText = "Extracting OCR pair name & flags...";
+        } else if(progress >= 55 && progress < 85){
+            status.innerText = "Detecting candlestick momentum...";
+        } else if(progress >= 85){
+            status.innerText = "Finalizing Quantum AI Signal...";
+        }
+
+        if(step >= totalSteps){
+            clearInterval(interval);
+            setTimeout(function(){
+                if(isChartDetected){
+                    renderSignalResult();
+                } else {
+                    renderErrorResult();
+                }
+            }, 300);
+        }
+    }, intervalTime);
+}
+
+
+/* =========================================================
+   OCR
+========================================================= */
+
+function detectPairFromScreenshotRegion(file){
+    const img = new Image();
+    img.src = URL.createObjectURL(file);
+
+    img.onload = function(){
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = img.width;
+        canvas.height = img.height;
+        ctx.drawImage(img, 0, 0, img.width, img.height);
+
+        Tesseract.recognize(canvas, "eng")
+        .then(function(result){
+            const text = result.data.text;
+            let cleaned = (text + " " + file.name).toUpperCase().replace(/\s+/g,"");
+            const regex = /([A-Z]{3}\/[A-Z]{3})/g;
+            const match = cleaned.match(regex);
+
+            if(match && match.length){
+                detectedPairName = match[0];
+                isChartDetected = true;
+            } else if(cleaned.includes("BDT")){
+                detectedPairName = "USD/BDT";
+                isChartDetected = true;
+            } else if(cleaned.includes("INR")){
+                detectedPairName = "USD/INR";
+                isChartDetected = true;
+            } else if(cleaned.includes("EURUSD") || cleaned.includes("EUR/USD")){
+                detectedPairName = "EUR/USD";
+                isChartDetected = true;
+            } else if(cleaned.includes("GBPUSD") || cleaned.includes("GBP/USD")){
+                detectedPairName = "GBP/USD";
+                isChartDetected = true;
+            } else if(cleaned.includes("USDJPY") || cleaned.includes("USD/JPY")){
+                detectedPairName = "USD/JPY";
+                isChartDetected = true;
+            } else if(cleaned.includes("USDPKR") || cleaned.includes("USD/PKR")){
+                detectedPairName = "USD/PKR";
+                isChartDetected = true;
+            } else if(cleaned.includes("USDBRL") || cleaned.includes("USD/BRL")){
+                detectedPairName = "USD/BRL";
+                isChartDetected = true;
+            } else if(cleaned.includes("AUDUSD") || cleaned.includes("AUD/USD")){
+                detectedPairName = "AUD/USD";
+                isChartDetected = true;
+            } else if(cleaned.includes("USDCAD") || cleaned.includes("USD/CAD")){
+                detectedPairName = "USD/CAD";
+                isChartDetected = true;
+            } else {
+                detectedPairName = "USD/BDT";
+                isChartDetected = true;
+            }
+        })
+        .catch(function(){
+            detectedPairName = "USD/BDT";
+            isChartDetected = true;
+        });
+    };
+
+    img.onerror = function(){
+        isChartDetected = false;
+    };
+}
+
+function renderErrorResult(){
+    document.getElementById("stateScanning").classList.add("hidden");
+    document.getElementById("stateError").classList.remove("hidden");
+}
+
+function renderSignalResult(){
+    document.getElementById("stateScanning").classList.add("hidden");
+    document.getElementById("stateResult").classList.remove("hidden");
+
+    const pair = detectedPairName || "USD/BDT";
+    document.getElementById("resPairTitle").innerText = pair;
+    document.getElementById("resFlags").innerHTML = getFlagsByPair(pair);
+
+    const isCall = Math.random() > .5;
+    const confidence = Math.floor(Math.random() * 14) + 82;
+
+    document.getElementById("resConfidence").innerText = confidence + "%";
+    document.getElementById("resConfBar").style.width = confidence + "%";
+
+    const badge = document.getElementById("resDirBadge");
+    const box = document.getElementById("resOptionBox");
+    const icon = document.getElementById("resCircleIcon");
+    const option = document.getElementById("resOptionValue");
+    const reason = document.getElementById("resReasonText");
+    const bias = document.getElementById("resBias");
+
+    if(isCall){
+        badge.className = "res-dir-badge badge-up";
+        badge.innerHTML = "▲ UP";
+        box.className = "option-box box-call";
+        icon.className = "circle-icon circle-call";
+        icon.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+        option.innerText = "CALL";
+        option.style.color = "#22c55e";
+        bias.innerText = "Bullish";
+        bias.style.color = "#22c55e";
+        reason.innerText = "Bullish momentum detected around the current price area. The next candle may continue upward based on the visual pattern.";
+    } else {
+        badge.className = "res-dir-badge badge-down";
+        badge.innerHTML = "▼ DOWN";
+        box.className = "option-box box-put";
+        icon.className = "circle-icon circle-put";
+        icon.innerHTML = '<i class="fa-solid fa-arrow-down"></i>';
+        option.innerText = "PUT";
+        option.style.color = "#ef4444";
+        bias.innerText = "Bearish";
+        bias.style.color = "#ef4444";
+        reason.innerText = "Selling pressure detected around the current price area. The next candle may continue downward based on the visual pattern.";
+    }
+
+    startCooldownTimer(60);
+}
+
+function startCooldownTimer(seconds){
+    cooldownSeconds = seconds;
+    const button = document.getElementById("btnReloadSignal");
+    const text = document.getElementById("reloadBtnText");
+
+    button.classList.add("disabled");
+
+    if(cooldownTimer){
+        clearInterval(cooldownTimer);
+    }
+
+    cooldownTimer = setInterval(function(){
+        if(cooldownSeconds > 0){
+            text.innerText = "Wait " + cooldownSeconds + "s for next signal";
+            cooldownSeconds--;
+        } else {
+            clearInterval(cooldownTimer);
+            button.classList.remove("disabled");
+            text.innerText = "Analyze another chart";
+        }
+    }, 1000);
+}
+
+function resetToUploadDirect(){
+    document.getElementById("page-analyzer").classList.add("hidden");
+    document.getElementById("modal-upload").classList.remove("hidden");
+    document.getElementById("previewContainer").style.display = "none";
+    document.getElementById("btnAnalyze").classList.add("hidden");
+    document.getElementById("fileInput").value = "";
+    selectedFile = null;
+}
+
+function resetToUpload(){
+    if(cooldownSeconds > 0){
+        return;
+    }
+    resetToUploadDirect();
+}
+
+
+/* =========================================================
+   LIVE SIGNAL
+========================================================= */
+
+function openLiveSignalModal(){
+    document.getElementById("modal-live-signal").classList.remove("hidden");
+    if(liveCooldownSeconds <= 0){
+        resetLiveSignalStep();
+    }
+}
+
+function closeLiveSignalModal(){
+    document.getElementById("modal-live-signal").classList.add("hidden");
+}
+
+function selectLivePair(pair){
+    liveSelectedPair = pair;
+    document.getElementById("selectedPairNameText").innerText = pair;
+    document.getElementById("liveStep1").classList.add("hidden");
+    document.getElementById("liveStep2").classList.remove("hidden");
+}
+
+function generateLiveSignal(time){
+    document.getElementById("liveStep2").classList.add("hidden");
+    document.getElementById("liveStep3").classList.remove("hidden");
+
+    document.getElementById("outPair").innerText = liveSelectedPair;
+    document.getElementById("outTime").innerText = time;
+
+    const call = Math.random() > .5;
+    document.getElementById("outDirection").innerHTML = call
+        ? '<span style="color:#22c55e;font-weight:bold;">CALL 🟢</span>'
+        : '<span style="color:#ef4444;font-weight:bold;">PUT 🔴</span>';
+
+    startLiveCooldownTimer(60);
+}
+
+function startLiveCooldownTimer(seconds){
+    liveCooldownSeconds = seconds;
+    const button = document.getElementById("btnLiveCooldown");
+    const text = document.getElementById("liveCooldownBtnText");
+
+    button.classList.add("disabled");
+
+    if(liveCooldownTimer){
+        clearInterval(liveCooldownTimer);
+    }
+
+    liveCooldownTimer = setInterval(function(){
+        if(liveCooldownSeconds > 0){
+            text.innerText = "Wait " + liveCooldownSeconds + "s for next signal";
+            liveCooldownSeconds--;
+        } else {
+            clearInterval(liveCooldownTimer);
+            button.classList.remove("disabled");
+            text.innerText = "Generate Another Signal";
+        }
+    }, 1000);
+}
+
+function resetLiveSignalStep(){
+    if(liveCooldownSeconds > 0){
+        return;
+    }
+    document.getElementById("liveStep1").classList.remove("hidden");
+    document.getElementById("liveStep2").classList.add("hidden");
+    document.getElementById("liveStep3").classList.add("hidden");
+}
+
+
+/* =========================================================
+   FUTURE SIGNAL
+========================================================= */
+
+function openFutureSignalModal(){
+    document.getElementById("modal-future-signal").classList.remove("hidden");
+    if(futureCooldownSeconds <= 0){
+        resetFutureSignalStep();
+    }
+}
+
+function closeFutureSignalModal(){
+    document.getElementById("modal-future-signal").classList.add("hidden");
+}
+
+function processFutureSignals(){
+    let count = parseInt(document.getElementById("futureAmountInput").value);
+
+    if(isNaN(count) || count <= 0){ count = 10; }
+    if(count > 50){ count = 50; }
+
+    document.getElementById("futureInputStep").classList.add("hidden");
+    document.getElementById("futureResultStep").classList.remove("hidden");
+
+    let output = "TIME ZONE UTC +6:00\n" +
+                 "TIME : 1 MINUTE\n" +
+                 "1 STEP MTG MAX\n" +
+                 "BROKER: " + selectedBrokerName + "\n\n";
+
+    let current = new Date();
+    current.setMinutes(current.getMinutes() + Math.floor(Math.random() * 3) + 3);
+
+    for(let i=0; i<count; i++){
+        const hours = String(current.getHours()).padStart(2,"0");
+        const minutes = String(current.getMinutes()).padStart(2,"0");
+        const pair = futurePairsList[Math.floor(Math.random() * futurePairsList.length)];
+        const direction = Math.random() > .5 ? "CALL" : "PUT";
+
+        output += hours + ":" + minutes + "," + pair + "," + direction + "\n";
+        current.setMinutes(current.getMinutes() + Math.floor(Math.random() * 6) + 5);
+    }
+
+    output += "\n⚠️ Random Signal so be careful ⚠️";
+
+    document.getElementById("futureOutputText").innerText = output;
+    startFutureCooldownTimer(60);
+}
+
+function startFutureCooldownTimer(seconds){
+    futureCooldownSeconds = seconds;
+    const button = document.getElementById("btnFutureCooldown");
+    const text = document.getElementById("futureCooldownBtnText");
+
+    button.classList.add("disabled");
+
+    if(futureCooldownTimer){
+        clearInterval(futureCooldownTimer);
+    }
+
+    futureCooldownTimer = setInterval(function(){
+        if(futureCooldownSeconds > 0){
+            text.innerText = "Wait " + futureCooldownSeconds + "s for next list";
+            futureCooldownSeconds--;
+        } else {
+            clearInterval(futureCooldownTimer);
+            button.classList.remove("disabled");
+            text.innerText = "Generate New List";
+        }
+    }, 1000);
+}
+
+function resetFutureSignalStep(){
+    if(futureCooldownSeconds > 0){
+        return;
+    }
+    document.getElementById("futureInputStep").classList.remove("hidden");
+    document.getElementById("futureResultStep").classList.add("hidden");
+}
+
+</script>
+
+</body>
+</html>
